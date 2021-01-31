@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import dt from 'datatables.net';
-import 'datatables.net-dt/css/jquery.datatables.css';
 import { getName, getBirthInfo, processDate } from './family-tree';
 
 dt();
