@@ -4,6 +4,8 @@ https://www.alexandraulsh.com/family-tree-map/
 
 Map the birthplaces of people in your family tree.
 
+![Family Tree Map](assets/family-tree-map.png)
+
 ## About
 
 [Ancestry](https://www.ancestry.com/), the most popular genealogy platform in the United States, lacks a feature that maps your entire family tree. To map your family tree, you could upload your tree to another service or geocode ancestor locations by hand. For privacy or data duplication reasons, you may not want to upload your family tree to another service, though. While both [Gramps](https://gramps-project.org/blog/) and [MacFamilyTree](https://www.syniumsoftware.com/macfamilytree) offer family tree maps, they require you to manually geocode and confirm each location before you can map it, a tedious and time-consuming process.
