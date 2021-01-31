@@ -38,7 +38,7 @@ GEDCOM files contain sensitive information like full names, birth dates, and bir
 
 Fortunately, this project does not require you to upload your GEDCOM file to an external server or service. Instead, your GEDCOM file is processed client-side in your browser using the [gedcom](https://github.com/tmcw/gedcom) parser. Your GEDCOM file is not stored in a database, and your family tree data does not persist across sessions. If you refresh the page, you will lose your map, and you will need to select your GEDCOM file again.
 
-This project does send birthplaces in your GEDCOM file to the [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/) for forward geocoding and placement on a [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/api/) map. This project does not send full names or birth years to the [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/), only birthplaces.
+This project does [send birthplaces in your GEDCOM file](https://github.com/alulsh/family-tree-map/blob/a21e7a67ec63b716d0e269105207b1097558e43c/geocode.js#L40) to the [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/) for forward geocoding and placement on a [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/api/) map. This project does not send full names or birth years to the [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/), only birthplaces.
 
 ## Alternatives
 
