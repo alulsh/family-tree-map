@@ -1,5 +1,7 @@
 # Family Tree Map
 
+https://www.alexandraulsh.com/family-tree-map/
+
 Map the birthplaces of people in your family tree.
 
 ## About
@@ -11,14 +13,15 @@ This project maps your family tree with only a GEDCOM file, the _de facto_ stand
 ## Getting started
 
 1. Export your family tree as a GEDCOM file. Most genealogy software and online platforms, including [Ancestry](https://support.ancestry.com/s/article/Uploading-and-Downloading-Trees) and [MyHeritage](https://faq.myheritage.com/en/article/can-i-export-a-gedcom-file-of-my-family-tree-from-my-family-site), support exporting your family tree as a GEDCOM file. Your GEDCOM file must have the file extension `.ged` to work with Family Tree Map.
-2. Click on _Choose File_ and find your exported GEDCOM file.
-3. Find your exported GEDCOM file and click on _Open_.
-4. Review your results.
+2. Visit https://www.alexandraulsh.com/family-tree-map/.
+3. Click on _Choose File_ and find your exported GEDCOM file.
+4. Find your exported GEDCOM file and click on _Open_.
+5. Review your results.
    - The birthplaces of people in your family tree will be [geocoded](https://docs.mapbox.com/help/glossary/geocoding/) on the map on the left.
    - Click on any marker on the map to see the name, birth date, birthplace, geocoded birthplace, and [geocoding relevance](https://docs.mapbox.com/help/how-mapbox-works/geocoding/#result-prioritization-in-forward-geocoding) of a family tree member.
    * Use the table on the right to search for a specific person in your family tree. You can search by last name or country.
    * Any family tree members that can't be geocoded (e.g., missing birthplace) will show up in the table.
-5. Optionally adjust the [geocoding relevance](https://docs.mapbox.com/help/how-mapbox-works/geocoding/#result-prioritization-in-forward-geocoding) to choose which results to show on the map. A higher score (0.75 and higher) is stricter and will show fewer results, while a lower score will show more results.
+6. Optionally adjust the [geocoding relevance](https://docs.mapbox.com/help/how-mapbox-works/geocoding/#result-prioritization-in-forward-geocoding) to choose which results to show on the map. A higher score (0.75 and higher) is stricter and will show fewer results, while a lower score will show more results.
 
 ## Limitations
 
