@@ -27,7 +27,7 @@ This project uses the following production dependencies:
 
 ## Tests
 
-Run `npm test` to run tests.
+Run `npm test` to run tests locally. This project runs tests automatically on every commit using [GitHub Workflows](https://github.com/alulsh/family-tree-map/actions).
 
 This project uses [Jest](https://jestjs.io/) for tests with a [minimal Babel configuration](https://ryankubik.com/blog/parcel-and-jest) for compatibility with [Parcel](https://parceljs.org/). Since this project loads [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/api/) through the Mapbox CDN instead of bundling with Parcel, the Jest tests mock Mapbox GL JS using the [global object](https://jestjs.io/docs/en/configuration#globals-object) in the test [set up file](https://jestjs.io/docs/en/configuration#setupfiles-array).
 
@@ -45,6 +45,8 @@ If you're using [Visual Studio Code](https://code.visualstudio.com/), you can ad
 ## Deployment
 
 This project is hosted on GitHub Pages using the `gh-pages` branch. Parcel bundles all files to a local `dist` directory, which we push to the `gh-pages` branch. You can view the deployment at https://www.alexandraulsh.com/family-tree-map/.
+
+This project runs the `npm run build` command automatically on every commit using [GitHub Workflows](https://github.com/alulsh/family-tree-map/actions) to catch any potential build errors.
 
 To deploy updates to GitHub Pages:
 
