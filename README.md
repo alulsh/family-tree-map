@@ -94,3 +94,14 @@ If you're using [Visual Studio Code](https://code.visualstudio.com/), you can ad
   "editor.formatOnSave": true
 }
 ```
+
+### Deployment
+
+This project is hosted on GitHub Pages using the `gh-pages` branch. Parcel bundles all files to a local `dist` directory, which we push to the `gh-pages` branch. You can view the deployment at https://www.alexandraulsh.com/family-tree-map/.
+
+To deploy updates to GitHub Pages:
+
+```sh
+npm run build
+npm run deploy
+```
