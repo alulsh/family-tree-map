@@ -1,0 +1,19 @@
+{
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "mapboxgl": "readonly",
+    "MapboxGeocoder": "readonly"
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "import/no-unresolved": "off"
+  }
+}

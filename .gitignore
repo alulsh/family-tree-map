@@ -1,0 +1,14 @@
+# Node
+node_modules
+npm-debug.log
+
+# Parcel
+.cache
+dist
+
+# Jest
+coverage
+
+# Environment
+.vscode
+.DS_Store

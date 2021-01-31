@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Family Tree Map</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+    <script
+      async
+      defer
+      src="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.js"
+    ></script>
+    <link
+      href="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+      type="text/css"
+    />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="flex-parent viewport-full">
+      <div class="flex-child viewport-full" id="map-container">
+        <div id="map"></div>
+      </div>
+      <div class="flex-child viewport-full scroll-auto" id="family-tree">
+        <div class="flex-parent flex-parent--column h-full bg-white">
+          <div class="flex-child flex-child--grow px12 py12">
+            <h1 class="txt-xl txt-bold mb6">Family Tree Map</h1>
+            <p>
+              Select a GEDCOM file to see the birth locations of people in your
+              family tree on a map. All of the information in your GEDCOM file
+              is kept in the browser except for birthplaces, which are mapped by
+              the
+              <a
+                class="link"
+                href="https://docs.mapbox.com/api/search/geocoding/"
+                >Mapbox Geocoding API</a
+              >. If you refresh the page you will need to select your GEDCOM
+              file again.
+            </p>
+            <hr class="txt-hr" />
+            <h2 class="txt-l txt-bold">GEDCOM file</h2>
+            <input
+              class="py6 my6"
+              type="file"
+              accept=".ged"
+              onchange="readGedcomFile(event)"
+            />
+            <h2 class="txt-l txt-bold">Settings</h2>
+            <div class="grid grid--gut0 w300">
+              <div class="col">
+                <label class="align-middle" for="relevance" title="test"
+                  ><a
+                    class="link"
+                    href="https://docs.mapbox.com/help/how-mapbox-works/geocoding/#search-result-prioritization"
+                    >Relevance</a
+                  ></label
+                ><svg class="icon color-gray mx6 inline align-middle">
+                  <use
+                    xlink:href="#icon-question"
+                    onmousemove="showTooltip(event, 'Adjust geocoding relevance');"
+                    onmouseout="hideTooltip();"
+                  />
+                </svg>
+                <div
+                  id="tooltip"
+                  display="none"
+                  style="position: absolute; display: none"
+                  class="tooltip px6 py6 round txt-bold txt-s align-center w300 bg-darken75 color-white"
+                >
+                  Only display locations equal to or greater than the selected
+                  geocoding relevance score.
+                </div>
+              </div>
+              <div class="col align-r align-middle">
+                <div
+                  class="flex-parent-inline flex-parent--center-cross py3 px3 round border border--darken25 w180"
+                >
+                  <div
+                    class="flex-child flex-child--grow range range--s range--gray"
+                  >
+                    <input
+                      class="align-middle"
+                      type="range"
+                      name="relevance"
+                      min="0"
+                      max="1"
+                      value="0.75"
+                      step="0.01"
+                      id="relevanceRange"
+                      oninput="updateRelevance(value)"
+                    />
+                  </div>
+                  <output
+                    class="flex-child flex-child--no-shrink w36 txt-mono"
+                    for="relevance"
+                    id="relevanceOutput"
+                    >0.75</output
+                  >
+                </div>
+              </div>
+            </div>
+            <div id="results" style="visibility: hidden">
+              <hr class="txt-hr" />
+              <h2 class="txt-l txt-bold mb6">Results</h2>
+              <table id="ancestor-table">
+                <thead>
+                  <tr>
+                    <th>First names</th>
+                    <th>Last names</th>
+                    <th>Birth date</th>
+                    <th>Birthplace</th>
+                    <th>Relevance</th>
+                    <th>Geocoded location</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+          <footer class="px12 py12 bg-gray-faint txt-s align-r">
+            Hosted on GitHub
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script src="window-functions.js"></script>
+    <script src="family-tree.js"></script>
+    <script src="geocode.js"></script>
+  </body>
+</html>
