@@ -4,7 +4,8 @@
     "test": "eslint *.js && jest --coverage",
     "lint": "eslint *.js",
     "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --public-url /family-tree-map/",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Alexandra L. Ulsh",
   "license": "MIT",
