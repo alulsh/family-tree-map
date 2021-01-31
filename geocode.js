@@ -4,7 +4,7 @@ import { getName, getBirthInfo, processDate } from './family-tree';
 
 dt();
 
-const dataTable = $('#ancestor-table').DataTable();
+const dataTable = $('#family-table').DataTable();
 mapboxgl.accessToken =
   'pk.eyJ1IjoiYWx1bHNoIiwiYSI6ImNra2JmZHplYzBjcXgyd291M3l2aWIxODAifQ.uCZpVDpR-z3BEUV0R7S1NA';
 

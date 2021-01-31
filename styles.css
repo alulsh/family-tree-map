@@ -16,6 +16,10 @@ body {
   width: 100%;
 }
 
+#results {
+  visibility: hidden;
+}
+
 .mapboxgl-popup {
   max-width: 200px;
 }
