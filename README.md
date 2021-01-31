@@ -12,7 +12,7 @@ This project maps your family tree with only a GEDCOM file, the _de facto_ stand
 
 ## Getting started
 
-1. Export your family tree as a GEDCOM file. Most genealogy software and online platforms, including [Ancestry](https://support.ancestry.com/s/article/Uploading-and-Downloading-Trees) and [MyHeritage](https://faq.myheritage.com/en/article/can-i-export-a-gedcom-file-of-my-family-tree-from-my-family-site), support exporting your family tree as a GEDCOM file. Your GEDCOM file must have the file extension `.ged` to work with Family Tree Map.
+1. Export your family tree as a GEDCOM file or [use this sample GEDCOM for John F. Kennedy](https://raw.githubusercontent.com/alulsh/family-tree-map/main/test/kennedy.ged). Most genealogy software and online platforms, including [Ancestry](https://support.ancestry.com/s/article/Uploading-and-Downloading-Trees) and [MyHeritage](https://faq.myheritage.com/en/article/can-i-export-a-gedcom-file-of-my-family-tree-from-my-family-site), support exporting your family tree as a GEDCOM file. Your GEDCOM file must have the file extension `.ged` to work with Family Tree Map.
 2. Visit https://www.alexandraulsh.com/family-tree-map/.
 3. Click on _Choose File_ and find your exported GEDCOM file.
 4. Find your exported GEDCOM file and click on _Open_.
