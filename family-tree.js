@@ -20,9 +20,16 @@ function getName(person) {
           firstName = name;
           lastName = 'Missing last name';
         } else {
-          firstName = forwardSlash[0].slice(0, -2);
-          // match everything between forward slashes, then remove starting and trailing slashes
-          lastName = name.match('/.+/')[0].slice(1, -1);
+          // Check for present but empty last name - e.g. // in 'Alexandra //'
+          const emptyLastName = name.match('^(.*?)//');
+          if (emptyLastName) {
+            firstName = forwardSlash[0].slice(0, -2);
+            lastName = 'Missing last name';
+          } else {
+            firstName = forwardSlash[0].slice(0, -2);
+            // match everything between forward slashes, then remove starting and trailing slashes
+            lastName = name.match('/.+/')[0].slice(1, -1);
+          }
         }
       } else {
         firstName = 'Missing first name';

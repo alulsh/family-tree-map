@@ -167,6 +167,73 @@ const noLastName = {
   ],
 };
 
+const emptyLastName = {
+  pointer: '@123456789@',
+  tag: 'INDI',
+  data: '',
+  tree: [
+    {
+      pointer: '',
+      tag: 'NAME',
+      data: 'Alexandra //',
+      tree: [
+        {
+          pointer: '',
+          tag: 'GIVN',
+          data: 'Alexandra',
+          tree: [],
+        },
+      ],
+    },
+    {
+      pointer: '',
+      tag: 'SEX',
+      data: 'F',
+      tree: [],
+    },
+    {
+      pointer: '',
+      tag: 'CHAN',
+      data: '',
+      tree: [
+        {
+          pointer: '',
+          tag: 'DATE',
+          data: '03 NOV 2019',
+          tree: [
+            {
+              pointer: '',
+              tag: 'TIME',
+              data: '10:58:27',
+              tree: [],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      pointer: '',
+      tag: '_CRE',
+      data: '',
+      tree: [
+        {
+          pointer: '',
+          tag: 'DATE',
+          data: '03 NOV 2019',
+          tree: [
+            {
+              pointer: '',
+              tag: 'TIME',
+              data: '10:57:32',
+              tree: [],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
 const sampleGedcomParsed = [
   {
     pointer: '',
@@ -791,6 +858,7 @@ export {
   defaultPerson,
   noName,
   noLastName,
+  emptyLastName,
   sampleGedcomParsed,
   geocodingApiMock,
 };

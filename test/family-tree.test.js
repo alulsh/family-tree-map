@@ -1,5 +1,5 @@
 import { expect, test } from '@jest/globals';
-import { defaultPerson, noName, noLastName } from './fixtures';
+import { defaultPerson, noName, noLastName, emptyLastName } from './fixtures';
 import { getName, getBirthInfo, processDate } from '../family-tree';
 
 test('Return first and last names of person', () => {
@@ -19,6 +19,13 @@ test('Graceful error handling for missing names', () => {
 test('Graceful error handling for missing last name', () => {
   expect(getName(noLastName)).toEqual({
     firstName: 'Jane Elizabeth',
+    lastName: 'Missing last name',
+  });
+});
+
+test('Graceful error handling for empty last name', () => {
+  expect(getName(emptyLastName)).toEqual({
+    firstName: 'Alexandra',
     lastName: 'Missing last name',
   });
 });
